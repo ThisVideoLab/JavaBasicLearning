@@ -1,4 +1,4 @@
-package sec01_operator_1.EX8_BookPractice;
+package sec01_operator_1.EX08_BookPractice;
 
 public class BookPractice {
 
