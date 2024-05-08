@@ -111,6 +111,91 @@ public class SwitchControlStatement {
 		}
 		 
 		/*-위의 switch 문과 동일한 기능을 수행하는 if 문-*/ System.out.println("-위의 switch 문과 동일한 기능을 수행하는 if 문-");
+		/*switch 문*/ System.out.println("switch 문");
+		
+		int e = 8;
+		switch (e) {
+		
+		case 10:
+		case 9:
+			System.out.println("A");
+			break;
+		case 8:
+			System.out.println("B");
+			break;
+		case 7:
+			System.out.println("C");
+			break;
+		default:
+			System.out.println("D");
+			break;
+		}
+		
+		/*if 문*/ System.out.println("if 문");
+		
+		if (e>= 9) {
+			System.out.println("A");
+		}else if(e == 8){
+			System.out.println("B");
+		}else if(e == 7){
+			System.out.println("C");
+		}else {
+			System.out.println("D");
+		}
+		
+		/* 이러한 switch 문과 if  문의 속도 차이는 사실 별로 없음. 다만 각 결과에 따른 속도 차이가 날 수 있음. 가령 if 문의 경우에는
+		   만족하는 조건식을 찾기까지 그 이전 조건식을 모두 연산해야 하지만, switch 문의 경우에는 그냥 조건을 만족하는 조건식으로 바로 점프를
+		   하기 때문에 모든 출력 속도가 동일하다는 장점이 있음. 다만 그 속도가 워낙 빠르기 때문에 수백만 개의 데이터를 처리하는 것이 아니라면
+		   큰 차이는 없음.  
+		 */
+		
+		/*-실습 - switch 문(break 포함, 미포함, if 문 변환-*/ System.out.println("-실습 - switch 문(break 포함, 미포함, if 문 변환-");
+		
+		/*break가 포함되지 않았을 때*/ System.out.println("break가 포함되지 않았을 때");
+		
+		int value1 = 2;
+		switch (value1) {
+		case 1:
+			System.out.println("A");
+		case 2:
+			System.out.println("B"); // 여기서 부터 출력 시작
+		case 3:
+			System.out.println("C");
+		default:
+			System.out.println("D"); // break가 없기 때문에 마지막 조건식까지 출력됨
+		}
+		System.out.println();
+		
+		/*break가 포함되어 있을 때*/ System.out.println("break가 포함되어 있을 때");
+		
+		int value2 = 2;
+		switch (value2) {
+		case 1:
+			System.out.println("A");
+			break;
+		case 2:
+			System.out.println("B"); // 여기서 부터 출력 시작
+			break; // break가 발동되어 가장 if 문 제외 가장 가까운 중괄호로 탈출
+		case 3:
+			System.out.println("C");
+			break;
+		default:
+			System.out.println("D"); // 마지막이기 조건식이기 때문에 break 불필요
+		}
+		System.out.println();
+		
+		/*if else 문으로 전환*/ System.out.println("if else 문으로 전환");
+		
+		if (value2 == 3) {
+			System.out.println("C");
+		}else if (value2 == 2) {
+			System.out.println("B"); // 실행 후 탈출
+		}else if (value2 == 1) {
+			System.out.println("A");
+		}else{
+			System.out.println("D");
+		}
+		
 		
 	}
 	
