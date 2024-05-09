@@ -111,7 +111,7 @@ public class WhileControlStatement {
 		*/
 		System.out.println();
 		
-		/*-while 문으로 만든 위의 무한 루프 탈출*/System.out.println("--while 문으로 만든 위의 무한 루프 탈출");
+		/*-while 문으로 만든 위의 무한 루프 탈출*/System.out.println("-while 문으로 만든 위의 무한 루프 탈출");
 		
 		a = 0;
 		while (true){
