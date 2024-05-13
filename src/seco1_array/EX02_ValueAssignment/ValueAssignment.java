@@ -39,10 +39,61 @@ public class ValueAssignment {
  		   자료형[] 참조 변수명 = enw 자료형[]{값, 값, ...., 값}; // 배열 길이 미지정, 배열 길이는 값의 개수로 결정됨 
  		   ex) int ex1[] = new int[]{3, 4, 5};
  		   
-		   
+ 		   방법3) 대입할 값만 입력하기
+ 		   
+ 		   마지막 방법은 new 키워드 없이 최가화할 값만 중괄호에 넣어 댕비하는 것. 초기화 데이터의 개수가 배열의 길이를 결정함.
+ 		   
+ 		   자료형[] 참조 변수명 = {값, 값, ..., 값};
+ 		   ex) int[] a = {3,4,5};
+ 		   
+ 		   변수 선언과 값 대입의 분리 가능 여부
+ 		   
+ 		   방법3은 방법2에서 new int[]를 생략한 형태임. 만일 방법2와 방법3이 완벽히 동일하다면 굳이 상대적으로 복잡한 방법2를 쓸 필요는
+ 		   없음. 그러나 방법3에서는 변수 선언과 값이 대입을 분리할 수 없다는 제약 조건이 있음. 즉 선언과 동시에 값을 대입할 때만 사용 가능.
+ 		   일견 큰 문제는 없어 보이지만, 일부 기능에 있어서는 사용이 불가능하니, 일일히 그 조건을 알기보다는 원리를 이해할 것.
 		     
 		 */
-	
+		
+		/*방법2 선언과 객체 대입 분리 가능*/ System.out.println("방법2 선언과 객체 대입 분리 가능");
+		
+		int[] ex2 = new int[] {3,4,5}; // 가능 
+		int[] ex3;
+		ex3 = new int[] {3,4,5}; // 분리 가능
+		
+		/*방법3 선언과 객체 대입 분리 불가능*/ System.out.println("방법2 선언과 객체 대입 분리 불가능");
+		
+		int[] ex4 = {3,4,5}; // 가능 
+		int[] ex5;
+		// ex5 = {3,4,5}; // 분리 불가능
+		System.out.println();
+		
+		/*배열의 값 대입 방법1*/ System.out.println("배열의 값 대입 방법1");
+		
+		int[] array1 = new int[3]; // 3칸짜리 배열 원소 값을 강제 초기화 
+		array1[0] = 3; // 각 인덱스 별 값 입력
+		array1[1] = 4;
+		array1[2] = 5;
+		System.out.println(array1[0] +" "+ array1[1] +" "+ array1[2]);
+		System.out.println();
+		
+		/*배열의 값 대입 방법2*/ System.out.println("배열의 값 대입 방법2");
+		
+		int [] array2;
+		array2 = new int [3]; // 배열 선언과 객체 대입을 분리 가능
+		array2[0] = 6;
+		array2[1] = 7;
+		array2[2] = 8;
+		System.out.println(array2[0] +" "+ array2[1] +" "+ array2[2]);
+		
+		int[] array4; // 배열 선언과 객체 대입을 분리 가능
+		array4 = new int[] {9,10,11};
+		System.out.println(array4[0] + " " + array4[1] + " " + array4[2]);
+		System.out.println();
+		
+		/*배열의 값 대입 방법3*/ System.out.println("배열의 값 대입 방법3");
+		
+		int [] array5 = {12,13,14}; // 배열 선언과 객체 대입을 한번에, 강제 초기화 생략 
+		System.out.println(array5[0] + " " + array5[1] + " " + array5[2]);
 		
 	}
 
