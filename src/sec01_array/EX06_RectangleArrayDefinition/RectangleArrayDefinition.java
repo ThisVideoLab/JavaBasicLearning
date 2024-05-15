@@ -235,18 +235,47 @@ public class RectangleArrayDefinition {
 		/*방법2) 배열 객체의 생성 및 원소 값*/ System.out.println("방법2) 배열 객체의 생성 및 원소 값");
 		
 		int[][] parray3 = new int[][] {{1, 2, 3}, {4, 5, 6}};
-		for (int i = 0; i < 2; i++) {
-			System.out.println("[");
+		
+		for (int i = 0; i < 2; i++) { // for 문을 활용해 Arrays.toString처럼 출력하기
+			System.out.print("[");
 			for(int j = 0; j < 3; j++) {
-				if(j == 3) {
+				System.out.print(parray3[i][j]);
+				if(j == 2) {
 					break;
 				}
-				System.out
-				
+				System.out.print(", ");
 			}
 			System.out.println("]");
-			System.out.println();
 		}
+		System.out.println();
+		
+		int[][] parray4;
+		parray4 = new int[][] {{1, 2, 3}, {4, 5, 6}};
+		
+		for (int i = 0; i < 2; i++) { // for 문을 활용해 Arrays.toString처럼 출력하기
+			System.out.print("[");
+			for(int j = 0; j < 3; j++) {
+				System.out.print(parray4[i][j]);
+				if(j == 2) {
+					break;
+				}
+				System.out.print(", ");
+			}
+			System.out.println("]");
+		}
+		System.out.println();
+		
+		
+		/*방법3) 배열의 객체 생성 및 원소 값 대입*/ System.out.println("방법3) 배열의 객체 생성 및 원소 값 대입");
+		
+		int[][] parray5 = {{1, 2, 3}, {4, 5, 6}};
+		
+		System.out.println(Arrays.toString(parray5[0]));
+		System.out.println(Arrays.toString(parray5[1]));
+		System.out.println();
+		
+		// int[][] parray6;
+		// parray6 = {{1, 2, 3}, {4, 5, 6}}; // 배열의 객체 생성과 동시에 원소값을 대입하는 방법은 선언과 대입의 분리가 불가능
 		
 		
 	}

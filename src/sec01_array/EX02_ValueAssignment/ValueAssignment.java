@@ -1,4 +1,4 @@
-package seco1_array.EX02_ValueAssignment;
+package sec01_array.EX02_ValueAssignment;
 
 public class ValueAssignment {
 	

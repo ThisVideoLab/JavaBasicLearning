@@ -1,6 +1,6 @@
 package sec01_selelctcontrolstatement.EX01_IfControlStatement;
 
-public class EX01_IfControlStatement {
+public class IfControlStatement {
 
 	public static void main(String[]args) {
 		

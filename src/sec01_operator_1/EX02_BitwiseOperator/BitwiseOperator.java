@@ -1,6 +1,6 @@
 package sec01_operator_1.EX02_BitwiseOperator;
 
-public class EX02_BitwiseOperator {
+public class BitwiseOperator {
 
 	public static void main(String[]args) {
 		

@@ -1,6 +1,6 @@
 package sec01_operator_1.EX03_ShiftOperator;
 
-public class EX03_ShiftOperator {
+public class ShiftOperator {
 
 	public static void main(String[]args) {
 	
