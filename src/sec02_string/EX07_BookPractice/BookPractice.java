@@ -86,10 +86,7 @@ public class BookPractice {
 		System.out.println("(단, 2개의 for 문에 들어갈 조건식에는 반드시 .length를 사용해야 함.)");
 		System.out.println();
 		
-		System.out.println(a4.length);
-		System.out.println(a4[1].length);
-		
-		for(int i = 0; 0< a4.length; i ++) {
+		for(int i = 0; i < a4.length; i ++) {
 			for(int j = 0; j < a4[i].length; j++) {
 				if(j == 0) {
 					System.out.print("[");
@@ -103,10 +100,61 @@ public class BookPractice {
 				}
 				System.out.print(", ");
 			}
-			
-			
 		}
 		
+		/*Q7 다음 코드의 실행 결과를 쓰시오.*/ System.out.println("Q7 다음 코드의 실행 결과를 쓰시오.");
+		System.out.println();
+		
+		System.out.println("String a7 = \"방가\";");
+		System.out.println("String b7 = new String(\"방가\");");
+		System.out.println("String c7 = \"방가\";");
+		System.out.println("String d7 = new String(\"방가\");");
+		System.out.println("String e7 = \"방가\";");
+		System.out.println("String f7 = new String(\"방가\");");
+		System.out.println();
+		
+		String a7 = "방가";
+		String b7 = new String("방가");
+		String c7 = "방가";
+		String d7 = new String("방가");
+		String e7 = "방가";
+		String f7 = new String("방가");
+		
+		System.out.println("System.out.println(a7 == b7);");
+		System.out.println(a7 == b7); // false // b7이 공유 불가능한 new 메서드를 사용한 객체이므로 불일치
+		System.out.println("System.out.println(a7 == c7);");
+		System.out.println(a7 == c7); // true // 공유 가능한 "방가" 객체를 a7과 공유하기 때문에 일치
+		System.out.println("System.out.println(a7 == d7);");
+		System.out.println(a7 == d7); // false // d7이 공유 불가능한 new 메서드를 사용한 객체이므로 불일치
+		System.out.println("System.out.println(a7 == e7);");
+		System.out.println(a7 == e7); // true // 공유 가능한 "방가" 객체를 e7과 공유하기 때문에 일치 
+		System.out.println("System.out.println(a7 == f7);");
+		System.out.println(a7 == f7);// false // f7이 공유 불가능한 new 메서드를 사용한 객체이므로 불일치
+		System.out.println();
+		
+		/*Q8 String str = "내 이름은 [홍길동]입니다. 나이는 [15]살 입니다"라는 문자열이 있을 때 String 클래스의 메서드를 이용해
+		     String name -> "홍길동", int age -> 15가 저장되도록 코드를 작성하시오(단, String 클래스의 indexOf(),
+		     lastIndexOf(), substring() 메서드는 반드시 한 번 이상 사용해야 함.) */
+ 
+		System.out.println("Q8 String str = \"내 이름은 [홍길동]입니다. 나이는 [15]살 입니다\"라는 문자열이 있을 때 String 클래스의");
+		System.out.println("   메서드를 이용해 String name -> \"홍길동\", int age -> 15가 저장되도록 코드를 작성하시오.");
+		System.out.println("   (단, String 클래스의 indexOf(), lastIndexOf(), substring() 메서드는 반드시 한 번 이상 사용해야 함.)");
+		System.out.println();
+		
+		System.out.println("String str = \"내이름은 [홍길동]입니다. 나이는 [15]살 입니다\";");
+		System.out.println("String name;");
+		System.out.println("int age;");
+		System.out.println();
+		
+		String str = "내이름은 [홍길동]입니다. 나이는 [15]살 입니다";
+		String name;
+		int age;
+		
+		name = str.substring(str.indexOf("홍길동"), str.indexOf("홍길동")+3);
+		age = Integer.parseInt(str.substring(str.indexOf("15"), str.indexOf("15")+2));
+		
+		System.out.println(name);
+		System.out.println(age);
 		
 	}
 	
