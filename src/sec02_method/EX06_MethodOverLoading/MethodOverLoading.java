@@ -22,10 +22,66 @@ public class MethodOverLoading {
 		   
 		   오버로딩된 메서드의 호출은 앞에서 배운 메서드의 호출과 전혀 다를 것이 없음. 다만 동일한 이름의 메서드가 많기 때문에, 입력매개변수에
 		   따라 실제 어떤 메서드가 호출된 것인지만 구분해주면 됨.
-		
+		   
+		   입력매개변수에 따라 4개의 메서드로 오버로딩된 메서드의 예
+		   
+		   public static void main(String[]args){
+		   	   print();
+		   	   print(3);
+		   	   print(5.8);
+		   	   print(2, 5);
+		   }
+		   public static void print() {
+		   	   System.out.println("데이터가 없습니다");
+		   }
+		   public static void print(int a) {
+		   	   System.out.println("a");
+		   }
+		   public static void print(double a) {
+		   	   System.out.println("a");
+		   }
+		   public static void print(int a, int b) {
+		   	   System.out.println("a" + ", " + "b");
+		   }
+		   
+		   앞의 예제를 살펴보면 4개의 print() 메서드가 오버로딩되어 있으며, 각각은 서로 다른 입력매개변수의 개수나 타입을 포함하고 있다는
+		   것을 알 수 있음. 즉, 서로 다른 메서드 시그니처를 가지고 있음. 이는 앞서 묘사한 print.jpg, print.bmp, print.gif와 같이
+		   시그니처에 따라 다른 메서드로 인식된다는 것임. 입력하는 자료형이 중복된다면, 오버로딩이 불가능함.
+		   사실 많이 사용해왔던 System.out.println() 메서드 또한 무려 10개의 메서드가 오버로딩된 메서드임. 따라서 정수, 실수, 문자열 등
+		   많은 출력이 자유롭게 이루어졌던 것.
 		   
 		 */
 		
+		/*- 실습 - 메서드의 오버로딩*/ System.out.println("- 실습 - 메서드의 오버로딩");
+	
+		print(); // 서로 다른 시그니처를 지니고 있는 print() 메서드를 입력매개변수에 따라 각기 다르게 호출
+		print(3);
+		print(5.8);
+		print(2, 5);
+		
 	}
 	
+	public static void print() {
+		System.out.println("데이터가 없습니다.");	
+	}
+	public static void print(int a) {
+		System.out.println(a);
+	}
+	public static void print(double a) {
+		System.out.println(a);
+	}
+	
+	/*
+	public static void print(double b) { // void print(double a){}와 중복으로 정의 불가능 
+		System.out.println(b);
+	}
+	*/
+	public static void print(int a, int b) {
+		System.out.println("a: " + a + " / b: " + b);
+	}
+	/*
+	public static void print(int a, int b) { // void print(int a, int b)와 붕족으로 정의 불가능
+		System.out.println("a: " + a + " / b: " + b);
+	}
+	*/
 }
