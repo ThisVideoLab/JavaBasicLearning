@@ -53,8 +53,6 @@ public class BookPractice {
 		   sec02_externalclass.EX3_BookPractice.pack01.A a =
 		   new sec02_externalclass.EX3_BookPractice.pack01.A();
 	     */
-
-		
 		
 		/*Q3 임포트를 사용해 클래스 B의 코드를 수정하시오.*/ System.out.println("Q3 임포트를 사용해 클래스 B의 코드를 수정하시오.");
 		System.out.println();
@@ -71,6 +69,5 @@ public class BookPractice {
 		System.out.println("클래스 B의 소스 코드에 import sec02_externalclass.EX3_BookPractice.pack01.A; 를 추가함");
 		System.out.println();
 		
-		// end of file
 	}
 }
