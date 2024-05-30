@@ -1,5 +1,10 @@
 package sec02_staticmodifier.EX01_StaticField_1;
 
+class A{
+	int m = 3;
+	static int n = 5;
+}
+
 public class StaticField {
 
 	public static void main(String[]args) {
@@ -48,12 +53,30 @@ public class StaticField {
 		   static 필드의 활용 방법 2 - 객체를 생성한 후 사용(권장하지 않음)
 		   
 		   A a = new A();
-		   System.out.println(a.n);
+		   System.out.println(a.n); // 5
 		   
-		   
+		   하지만 정적 필드라는 것을 확실히 나타내기 위해 이 방법은 가능한 한 사용하지 않도록 할 것.
+		   static 변수의 남용은 객체지향 프로그래밍의 원칙에 어긋남. static 멤버는 프로그램의 생명주기 동안 메모리에 상주하므로, 불필요한 메모리 사용을
+		   초래할 수 있음. 특히 대규모 애플리케이션에서 성능 저하의 원인이 될 수 있음.
 		   
 		 */
 		
+		/* 인스턴스 필드 활용 방법(객체를 생성한 후 사용 가능) */ System.out.println("인스턴스 필드 활용 방법(객체를 생성한 후 사용 가능");
+		
+		A a1 = new A();
+		System.out.println(a1.m);
+		System.out.println();
+		
+		/*정적 필드 활용 방법*/ System.out.println("정적 필드 활용 방법");
+		/*객체 생성 없이 클래스명으로 바로 활용*/ System.out.println("1. 객체 생성 없이 클래스명으로 바로 활용");
+		
+		System.out.println(A.n);
+		System.out.println();
+		
+		/*객체를 생성한 후 활용(권장하지 않음)*/ System.out.println("2. 객체를 생성한 후 활용(권장하지 않음)");
+		A a2 = new A();
+		System.out.println(a2.n);
+		System.out.println();
 		
 	}
 	
