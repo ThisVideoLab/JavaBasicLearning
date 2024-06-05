@@ -1,4 +1,4 @@
-package sec02_typecasting.EX1_Typecasting_1;
+package sec02_typecasting.EX01_Typecasting_1;
 
 
 // 클래스의 상속관계
@@ -81,10 +81,15 @@ public class Typecasting_1 {
 		
 		A ab = new B();
 		B b = (B) ab; // A to B 다운 캐스팅(수동 변환) // 내부에 A 객체를 포함하고 있으므로 가능함. 
+		// C c = (C) ab; // A to C 다운 캐스팅(수동 변환) // ab의 위치 내부에 C 객체가 없으므로 불가능함.
 		
+		B bd = new D(); //
+		D d = (D) bd; // B to D 다운 캐스팅(수동 변환)
 		
-		
-		 
+		A ad = new D(); // D 안에 B 안에 A
+		B b3 = (B) ad; // A to B 다운 캐스팅(수동 변환)
+		B d3 = (D) ad; // A to D 다운 캐스팅(수동 변환)		
+				 
 	}
 
 }
