@@ -48,15 +48,34 @@ public class Typecasting_3 {
 		// instanceof
 		
 		A aa = new A();
-		A ab = new A();
+		A ab = new B();
 		
 		System.out.println(aa instanceof A);
 		System.out.println(ab instanceof A);
 		
 		System.out.println(aa instanceof B);
 		System.out.println(ab instanceof B);
+		System.out.println();
 		
+		if(aa instanceof B) { // 만약 변수 aa가 A 타입으로 캐스팅이 가능하다면
+			B b = (B) aa;
+			System.out.println("aa를 B로 캐스팅했습니다.");
+		}else {
+			System.out.println("aa를 B로 캐스팅하지 못했습니다.");
+		}
 		
+		if(ab instanceof B) { // 만약 변수 ab가 B 타입으로 캐스팅이 가능하다면
+			B b = (B) ab;
+			System.out.println("ab를 B로 캐스팅했습니다.");
+		}else {
+			System.out.println("ab를 B로 캐스팅하지 못했습니다.");
+		}
+		
+		if("안녕" instanceof String) { // 만약 변수 aa가 A 타입으로 캐스팅이 가능하다면
+			System.out.println("\"안녕\"은 String 클래스입니다.");
+		}else {
+			System.out.println("\"안녕\"은 String 클래스가 아닙니다.");
+		}
 		
 	}
 	
