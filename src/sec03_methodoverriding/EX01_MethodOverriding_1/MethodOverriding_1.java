@@ -128,7 +128,6 @@ public class MethodOverriding_1 {
 		A ab = new B();
 		ab.print();
 		
-		
 	}
 	
 }
