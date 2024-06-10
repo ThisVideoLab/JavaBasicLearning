@@ -1,9 +1,20 @@
 package sec06_objectclass.EX01_ObjectMethod_ToString;
 
-class A {
+class A { // extends Object (컴파일러에 따라 자동으로 추가함)
 	int a = 3;
 	int b = 4;
 }
+
+class B {
+	int a = 3;
+	int b = 4;
+	@Override
+	public String toString() {
+		return "필드값: a = " + a + ", b  = " + b;
+	}
+	
+}
+
 
 public class ObjectMethod_ToString {
 
@@ -36,11 +47,19 @@ public class ObjectMethod_ToString {
 		A aa = new A();
 		System.out.printf("%x\n", aa.hashCode()); // 70dea4e3
 		System.out.println(aa); // 패지명.클래스명@해시코드, sec06_objectclass.EX01_ObjectMethod_ToString.A@75a1cd57
+		System.out.println(aa.toString()); // 위와 같은 결과 출력
+		System.out.println();
 		
-		/* 또한 println() 메서드는 객체를 출력하면 자동으로
+		/* 또한 println() 메서드는 객체를 출력하면 자동으로 객체 내의 toString() 메서드를 호출함. 따라서 System.out.println(aa)는
+		   System.out.println(aa.toString())과 같이 표현 됨. 앞에서 언급한 것처럼 toString()의 출력 결과인 
+		   '패키지명.클래스명@해시코드'는 객체의 직관적인 정보를 제공하지 못함. 그래서 클래스 B처럼 자식 클래스에서 toString() 메서드를
+		   오버라이딩해 사용하는 것이 일반적임.
 		   
 		 */
-
+		
+		B bb = new B();
+		System.out.println(bb);
+		
 	}
 	
 }
