@@ -1,4 +1,4 @@
-package sec02_abstractmodifier.EX3_AbstractModifier_3;
+package sec02_abstractmodifier.EX03_AbstractModifier_3;
 
 class Animal1{
 	void cry() {
