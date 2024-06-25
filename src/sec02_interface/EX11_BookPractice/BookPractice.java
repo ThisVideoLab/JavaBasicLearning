@@ -245,33 +245,6 @@ public class BookPractice {
 	B8 b8 = new B8();
 	b8.abc();
 	
-	
-	
-	
-	
-	
-
-	
-	
-	
-			
-	
-			
-	
-			
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-		
-	
-	
 	}
 	
 }
