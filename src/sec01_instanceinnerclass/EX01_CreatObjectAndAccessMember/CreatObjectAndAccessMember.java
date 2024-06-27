@@ -150,7 +150,6 @@ class CreatObjectAndAccessMember {
 		
 		A3.B3 b3 = a3.new B3();
 		b3.bcd();
-		
 
 	}
 
