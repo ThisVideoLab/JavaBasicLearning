@@ -1,5 +1,14 @@
 package sec01_typeofexception.EX01_CheckedException;
 
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+
+class A implements Cloneable {
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+}
+
 public class CheckedException {
 
 	public static void main(String[]args) {
@@ -64,7 +73,40 @@ public class CheckedException {
 		   참고로 clonable는 내부에 추상 메서드를 포함하고 있지 않으며, 단순히 해당 클래스가 복사 기능을 제공함을
 		   나타내는 마커 marker의 기능만을 수행하는 인터페이스임.
 		   
+		   위에서 알아본 5가지의 일반 예외 중에는 아직 배우지 않은 클래스와 메서드가 다수 포함돼있음. 사용된
+		   클래스나 메서드에 대해서는 차차 알아보기로 하고, 여기서는 일반 예외 자체가 문법으로 예외처리를
+		   요구한다는 것만을 기억하자. 이클립스에서는 예외 처리를 하지 않아 발생하는 오류 부분에 마우스 커서를
+		   올려 놓으면 'add throws declaration'과 'Surround with try/catch'중에서 선택할
+		   수 있는 창이 나타남. 이 중 두번째 항목을 선택하면 예외 처리 구문을 쉽게 추가 가능함.
+		   
 		 */
+		
+		// Checked Exception(일반 예외)
+		// 아래 항목은 모두 오류가 발생함.
+		
+		// 1. InterruptedException
+		
+		Thread.sleep(1000);
+		
+		// 2. ClassNotFoundException
+		
+		Class cls = Class.forName("java.lang.Object");
+		
+		// 3. IOExcepton
+		
+		InputStreamReader in = new InputStreamReader(System.in);
+		in.read();
+		
+		// 4. FileNotFoundException
+		
+		FileInputStream fis = new FileInputStream("text.txt");
+		
+		// 5. CloneNotSupportedException
+		
+		A a1 = new A();
+		A a2 = new (A)a1.clone();
+		
+		// 모두 오류가 발생함.
 		
 	}
 	
