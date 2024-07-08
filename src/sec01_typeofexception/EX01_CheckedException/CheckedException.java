@@ -86,25 +86,25 @@ public class CheckedException {
 		
 		// 1. InterruptedException
 		
-		Thread.sleep(1000);
+		// Thread.sleep(1000);
 		
 		// 2. ClassNotFoundException
 		
-		Class cls = Class.forName("java.lang.Object");
+		// Class cls = Class.forName("java.lang.Object");
 		
 		// 3. IOExcepton
 		
-		InputStreamReader in = new InputStreamReader(System.in);
-		in.read();
+		// InputStreamReader in = new InputStreamReader(System.in);
+		//in.read();
 		
 		// 4. FileNotFoundException
 		
-		FileInputStream fis = new FileInputStream("text.txt");
+		// FileInputStream fis = new FileInputStream("text.txt");
 		
 		// 5. CloneNotSupportedException
 		
-		A a1 = new A();
-		A a2 = new (A)a1.clone();
+		//A a1 = new A();
+		// A a2 = new (A)a1.clone();
 		
 		// 모두 오류가 발생함.
 		
